@@ -3,16 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>训练 - 腹肌训练科普</title>
+    <title>腹肌训练 - 动作大全</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
   </head>
-  <body class="bg-gray-50 text-gray-800 font-sans">
+  <body class="bg-gray-50 text-gray-800">
     <!-- 导航 -->
-    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <header class="fixed top-0 w-full z-50 bg-white shadow-md">
       <div
         class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center"
       >
-        <h1 class="text-xl font-bold text-blue-600">腹肌训练</h1>
+        <h1 class="text-xl font-extrabold text-blue-600">腹肌训练</h1>
         <nav class="space-x-6">
           <a href="index.html" class="hover:text-blue-600">首页</a>
           <a href="train.html" class="text-blue-600 font-semibold">训练</a>
@@ -22,65 +31,92 @@
       </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 py-24">
-      <h2 class="text-3xl font-bold text-center mb-12">经典腹肌训练动作</h2>
+    <!-- 页头 -->
+    <section
+      class="pt-32 pb-12 bg-gradient-to-r from-blue-100 to-blue-200 text-center"
+    >
+      <h2 class="text-4xl font-extrabold mb-4">腹肌动作精选</h2>
+      <p class="text-lg text-gray-700">四个动作组合，全方位锻炼腹肌</p>
+    </section>
 
-      <div class="grid md:grid-cols-2 gap-10">
-        <!-- 动作 1 -->
-        <div class="bg-white shadow-lg rounded-xl p-6">
-          <h3 class="text-xl font-semibold mb-3">1. 仰卧卷腹 (Crunch)</h3>
-          <img
-            src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif"
-            alt="卷腹"
-            class="rounded-lg mb-3"
-          />
-          <p class="text-gray-600">
-            经典的腹肌训练动作，主要刺激上腹部。注意动作慢，避免用颈部发力。
-          </p>
-        </div>
-
-        <!-- 动作 2 -->
-        <div class="bg-white shadow-lg rounded-xl p-6">
-          <h3 class="text-xl font-semibold mb-3">2. 平板支撑 (Plank)</h3>
-          <img
-            src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif"
-            alt="平板支撑"
-            class="rounded-lg mb-3"
-          />
-          <p class="text-gray-600">
-            全身核心稳定训练，保持身体成一直线，避免塌腰或抬臀。
-          </p>
-        </div>
-
-        <!-- 动作 3 -->
-        <div class="bg-white shadow-lg rounded-xl p-6">
-          <h3 class="text-xl font-semibold mb-3">
-            3. 俄罗斯转体 (Russian Twist)
-          </h3>
-          <img
-            src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif"
-            alt="俄罗斯转体"
-            class="rounded-lg mb-3"
-          />
-          <p class="text-gray-600">
-            双手合十或拿哑铃，左右旋转，锻炼腹外斜肌。
-          </p>
-        </div>
-
-        <!-- 动作 4 -->
-        <div class="bg-white shadow-lg rounded-xl p-6">
-          <h3 class="text-xl font-semibold mb-3">4. 仰卧举腿 (Leg Raise)</h3>
-          <img
-            src="https://media.giphy.com/media/26BRuo6sLetdllPAQ/giphy.gif"
-            alt="举腿"
-            class="rounded-lg mb-3"
-          />
-          <p class="text-gray-600">
-            主要刺激下腹部，注意慢慢下放双腿，保持核心发力。
-          </p>
+    <!-- 动作列表 -->
+    <section
+      class="max-w-6xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-8"
+    >
+      <!-- 交臂卷腹 -->
+      <div
+        class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+      >
+        <img
+          src="assets/1.gif"
+          alt="交臂卷腹"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">交臂卷腹</h3>
+          <p class="text-gray-600 text-sm mb-2">强化上腹和斜腹肌的经典动作。</p>
+          <div class="text-gray-500 text-sm">
+            难度：初级 | 组数：3 | 次数：15
+          </div>
         </div>
       </div>
-    </main>
+
+      <!-- 仰卧抬腿 -->
+      <div
+        class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+      >
+        <img
+          src="assets/2.gif"
+          alt="仰卧抬腿"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">仰卧抬腿</h3>
+          <p class="text-gray-600 text-sm mb-2">强化下腹肌，控制核心稳定。</p>
+          <div class="text-gray-500 text-sm">
+            难度：中级 | 组数：3 | 次数：12
+          </div>
+        </div>
+      </div>
+
+      <!-- 仰卧屈腿 -->
+      <div
+        class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+      >
+        <img
+          src="assets/3.gif"
+          alt="仰卧屈腿"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">仰卧屈腿</h3>
+          <p class="text-gray-600 text-sm mb-2">
+            下腹肌与髋屈肌训练，辅助核心力量。
+          </p>
+          <div class="text-gray-500 text-sm">
+            难度：中级 | 组数：3 | 次数：15
+          </div>
+        </div>
+      </div>
+
+      <!-- 左右碰膝 -->
+      <div
+        class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+      >
+        <img
+          src="assets/4.gif"
+          alt="左右碰膝"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">左右碰膝</h3>
+          <p class="text-gray-600 text-sm mb-2">强化斜腹肌与核心稳定性。</p>
+          <div class="text-gray-500 text-sm">
+            难度：初级 | 组数：3 | 次数：20
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="bg-gray-900 text-gray-400 py-6 text-center">
       <p>© 2025 腹肌训练科普 | Designed by 爸爸的小猫</p>

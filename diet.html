@@ -3,16 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>饮食 - 腹肌训练科普</title>
+    <title>科学饮食与BMI - 腹肌训练</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
   </head>
-  <body class="bg-gray-50 text-gray-800 font-sans">
+  <body class="bg-gray-50 text-gray-800">
     <!-- 导航 -->
-    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <header class="fixed top-0 w-full z-50 bg-white shadow-md">
       <div
         class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center"
       >
-        <h1 class="text-xl font-bold text-blue-600">腹肌训练</h1>
+        <h1 class="text-xl font-extrabold text-blue-600">腹肌训练</h1>
         <nav class="space-x-6">
           <a href="index.html" class="hover:text-blue-600">首页</a>
           <a href="train.html" class="hover:text-blue-600">训练</a>
@@ -22,40 +31,184 @@
       </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 py-24">
-      <h2 class="text-3xl font-bold text-center mb-10">科学饮食，打造腹肌</h2>
+    <!-- 页头 -->
+    <section
+      class="pt-32 pb-12 bg-gradient-to-r from-yellow-100 to-yellow-200 text-center"
+    >
+      <h2 class="text-4xl font-extrabold mb-4">科学饮食 & BMI计算器</h2>
+      <p class="text-lg text-gray-700">合理分配饮食，判断增肌或减脂方向</p>
+    </section>
 
-      <div class="space-y-10">
-        <div class="bg-white rounded-xl shadow-lg p-6">
-          <h3 class="text-2xl font-semibold mb-3">热量差</h3>
-          <p class="text-gray-700">
-            想要看到腹肌，首先要降低体脂。保持
-            <b>消耗热量 > 摄入热量</b>，即制造热量差。建议通过健康饮食 +
-            适量有氧来实现。
-          </p>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-lg p-6">
-          <h3 class="text-2xl font-semibold mb-3">蛋白质摄入</h3>
-          <p class="text-gray-700">
-            蛋白质能帮助维持肌肉，避免减脂过程中过多流失。常见食物有：鸡胸肉、鱼、鸡蛋、牛奶、豆类。
-          </p>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-lg p-6">
-          <h3 class="text-2xl font-semibold mb-3">示例食谱</h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-2">
-            <li><b>早餐：</b>燕麦 + 鸡蛋 + 牛奶</li>
-            <li><b>午餐：</b>鸡胸肉 + 米饭 + 西兰花</li>
-            <li><b>加餐：</b>蛋白粉或酸奶</li>
-            <li><b>晚餐：</b>三文鱼 + 红薯 + 沙拉</li>
-          </ul>
-        </div>
+    <!-- 计算器 -->
+    <section
+      class="max-w-3xl mx-auto px-4 py-16 bg-white rounded-xl shadow-md space-y-6"
+    >
+      <!-- 体重/身高输入 -->
+      <div>
+        <label class="block font-semibold mb-1">体重 (kg)</label>
+        <input
+          type="number"
+          id="weight"
+          value="70"
+          class="w-full border rounded px-3 py-2"
+        />
       </div>
-    </main>
+      <div>
+        <label class="block font-semibold mb-1">身高 (cm)</label>
+        <input
+          type="number"
+          id="height"
+          value="175"
+          class="w-full border rounded px-3 py-2"
+        />
+      </div>
 
-    <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+      <!-- 食物输入 -->
+      <div>
+        <label class="block font-semibold mb-1">蛋白粉 (克)</label>
+        <input
+          type="number"
+          id="proteinPowder"
+          value="60"
+          class="w-full border rounded px-3 py-2"
+        />
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">鸡蛋 (个)</label>
+        <input
+          type="number"
+          id="eggs"
+          value="2"
+          class="w-full border rounded px-3 py-2"
+        />
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">大米 (克)</label>
+        <input
+          type="number"
+          id="rice"
+          value="150"
+          class="w-full border rounded px-3 py-2"
+        />
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">面包 (克)</label>
+        <input
+          type="number"
+          id="bread"
+          value="50"
+          class="w-full border rounded px-3 py-2"
+        />
+      </div>
+
+      <!-- 计算按钮 -->
+      <button
+        onclick="calculateAll()"
+        class="w-full bg-yellow-400 text-white font-semibold py-2 rounded hover:bg-yellow-500 transition"
+      >
+        计算结果
+      </button>
+
+      <!-- 显示结果 -->
+      <div
+        id="result"
+        class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded text-gray-800 mt-4"
+      ></div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-6 text-center mt-12">
       <p>© 2025 腹肌训练科普 | Designed by 爸爸的小猫</p>
     </footer>
+
+    <script>
+      function calculateAll() {
+        const weight = parseFloat(document.getElementById("weight").value);
+        const height =
+          parseFloat(document.getElementById("height").value) / 100; // cm -> m
+        const proteinPowder = parseFloat(
+          document.getElementById("proteinPowder").value
+        );
+        const eggs = parseInt(document.getElementById("eggs").value);
+        const rice = parseFloat(document.getElementById("rice").value);
+        const bread = parseFloat(document.getElementById("bread").value);
+
+        if (
+          isNaN(weight) ||
+          isNaN(height) ||
+          isNaN(proteinPowder) ||
+          isNaN(eggs) ||
+          isNaN(rice) ||
+          isNaN(bread)
+        ) {
+          alert("请填写所有数值");
+          return;
+        }
+
+        // BMI计算
+        const bmi = weight / (height * height);
+        let bmiStatus = "";
+        if (bmi < 18.5) bmiStatus = "偏瘦，建议增肌";
+        else if (bmi <= 24) bmiStatus = "正常";
+        else bmiStatus = "偏胖，建议减脂";
+
+        // 推荐摄入量
+        const recommended = {
+          carbs: weight * 3,
+          protein: weight * 2,
+          fat: weight * 0.8,
+        };
+
+        // 总摄入量
+        const total = {
+          carbs: proteinPowder * 0 + eggs * 0 + rice * 0.28 + bread * 0.5,
+          protein: proteinPowder * 1 + eggs * 6 + rice * 0.026 + bread * 0.1,
+          fat: proteinPowder * 0 + eggs * 5 + rice * 0.002 + bread * 0.05,
+        };
+
+        // 判断状态 ±20g为正常
+        const check = (val, target) => {
+          const range = 20;
+          if (val < target - range) return "不足";
+          else if (val > target + range) return "偏高";
+          else return "正常";
+        };
+        const status = {
+          carbs: check(total.carbs, recommended.carbs),
+          protein: check(total.protein, recommended.protein),
+          fat: check(total.fat, recommended.fat),
+        };
+
+        // 时间段分配
+        const dist = { 早: 0.2, 中: 0.2, 练前: 0.15, 练后: 0.35, 晚餐: 0.1 };
+        let distributionHtml =
+          "<h4 class='font-semibold mt-4 mb-2'>时间段摄入分配:</h4><ul class='list-disc pl-5'>";
+        for (const key in dist) {
+          distributionHtml += `<li>${key}: 碳水 ${(
+            total.carbs * dist[key]
+          ).toFixed(1)}g, 蛋白 ${(total.protein * dist[key]).toFixed(
+            1
+          )}g, 油脂 ${(total.fat * dist[key]).toFixed(1)}g</li>`;
+        }
+        distributionHtml += "</ul>";
+
+        // 显示结果
+        document.getElementById("result").innerHTML = `
+        <h3 class="font-semibold text-lg mb-2">BMI & 摄入结果</h3>
+        <p>BMI: ${bmi.toFixed(1)} (${bmiStatus})</p>
+        <p>碳水: ${total.carbs.toFixed(1)}g (${status.carbs}) | 推荐: ${
+          recommended.carbs
+        }g</p>
+        <p>蛋白质: ${total.protein.toFixed(1)}g (${status.protein}) | 推荐: ${
+          recommended.protein
+        }g</p>
+        <p>油脂: ${total.fat.toFixed(1)}g (${status.fat}) | 推荐: ${
+          recommended.fat
+        }g</p>
+        ${distributionHtml}
+      `;
+      }
+
+      window.onload = calculateAll;
+    </script>
   </body>
 </html>

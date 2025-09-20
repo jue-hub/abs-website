@@ -3,16 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>关于 - 腹肌训练科普</title>
+    <title>关于我们 - 腹肌训练</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
   </head>
-  <body class="bg-gray-50 text-gray-800 font-sans">
+  <body class="bg-gray-50 text-gray-800">
     <!-- 导航 -->
-    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <header class="fixed top-0 w-full z-50 bg-white shadow-md">
       <div
         class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center"
       >
-        <h1 class="text-xl font-bold text-blue-600">腹肌训练</h1>
+        <h1 class="text-xl font-extrabold text-blue-600">腹肌训练</h1>
         <nav class="space-x-6">
           <a href="index.html" class="hover:text-blue-600">首页</a>
           <a href="train.html" class="hover:text-blue-600">训练</a>
@@ -22,19 +31,40 @@
       </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-4 py-24 text-center">
-      <h2 class="text-3xl font-bold mb-6">关于我们</h2>
-      <p class="text-lg text-gray-700 leading-relaxed mb-8">
-        本网站是一个
-        <b>腹肌训练主题科普网站</b
-        >，目标是帮助初学者用科学的方法了解腹肌训练、饮食控制和核心健康。
-        我们追求 <b>小而精</b> 的内容，避免虚假承诺，只传递实用的健身知识。
+    <!-- 页头 -->
+    <section
+      class="pt-32 pb-12 bg-gradient-to-r from-green-100 to-green-200 text-center"
+    >
+      <h2 class="text-4xl font-extrabold mb-4">关于我们</h2>
+      <p class="text-lg text-gray-700">
+        科普 + 实用，为热爱腹肌的人提供训练与饮食指南
       </p>
-      <p class="text-gray-600">
-        🚀 当前阶段：最小原型网站，用于测试用户兴趣和反馈。<br />
-        💡 后续计划：扩展到更多部位训练、完整饮食方案、交互式工具。
-      </p>
-    </main>
+    </section>
+
+    <!-- 内容 -->
+    <section class="max-w-5xl mx-auto px-4 py-16 space-y-8">
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <h3 class="text-2xl font-semibold mb-2">网站定位</h3>
+        <p class="text-gray-700">
+          本网站旨在提供科学、易懂的腹肌训练方法与饮食搭配建议，帮助用户在家即可实现有效训练。
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <h3 class="text-2xl font-semibold mb-2">设计理念</h3>
+        <p class="text-gray-700">
+          简洁、直观、可操作。每个动作配
+          GIF，饮食建议清晰，保持一致视觉风格与交互体验。
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <h3 class="text-2xl font-semibold mb-2">作者信息</h3>
+        <p class="text-gray-700">
+          由 <strong>爸爸的小猫</strong> 设计与维护 💖
+        </p>
+      </div>
+    </section>
 
     <footer class="bg-gray-900 text-gray-400 py-6 text-center">
       <p>© 2025 腹肌训练科普 | Designed by 爸爸的小猫</p>
